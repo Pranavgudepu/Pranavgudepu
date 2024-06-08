@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        
+        #main{
+            width: 350px;
+            height: 350px;
+            background-color: #1D3849;
+        }
+        h1{
+            
+            text-align: center;
+            color: aquamarine;
+        }
+        input{
+            width: 20%;
+            height: 40px;
+            font-size: 20px;
+            margin: 6px;
+            
+        }
+        #eee{
+            width: 95%;
+            background-color: silver;
+            border-radius: 6px;
+            
+        }
+        #qqq
+        {
+            background-color: lightgreen;
+            border-radius: 12px;
+        }
+        #rrr{
+            background-color: lightgrey;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="main">
+        <form action=""name="f">
+            <h1>CALCULATOR</h1>
+            <input type="text" name="ddd" placeholder="0" id="eee">
+            <br>
+            <br>
+            <input type="button" name="" id="qqq" value="1" onclick="f.ddd.value+=1">
+            <input type="button" name="" id="qqq" value="2" onclick="f.ddd.value+=2">
+            <input type="button" name="" id="qqq" value="3" onclick="f.ddd.value+=3">
+            <input type="button" name="" id="rrr" value="+" onclick="add()">
+
+             
+            <br>
+            <input type="button" name="" id="qqq" value="4" onclick="f.ddd.value+=4">
+            <input type="button" name="" id="qqq" value="5" onclick="f.ddd.value+=5">
+            <input type="button" name="" id="qqq" value="6" onclick="f.ddd.value+=6">
+            <input type="button" name="" id="rrr" value="-" onclick="sub()">
+        
+            <br>
+            <input type="button" name="" id="qqq" value="7" onclick="f.ddd.value+=7">
+            <input type="button" name="" id="qqq" value="8" onclick="f.ddd.value+=8">
+            <input type="button" name="" id="qqq" value="9" onclick="f.ddd.value+=9">
+            <input type="button" name="" id="rrr" value="/" onclick="div()">
+             
+            <br>
+            <input type="button" name="" id="qqq" value="c" onclick="f.ddd.value=''">
+            <input type="button" name="" id="qqq" value="0" onclick="f.ddd.value+=0">
+            <input type="button" name="" id="qqq" value="=" onclick="f.ddd.value=eval(f.ddd.value)">
+            <input type="button" name="" id="rrr" value="x" onclick="mul()">
+ 
+            <br>
+
+
+        </form>
+    </div>
+    <script>
+        function add()
+        {
+            var lastval=0,b=0;
+            lastval=f.ddd.value;
+            b=lastval.charAt(lastval.length-1);
+             if(b=='+'||b=='-'||b=='*'||b=='/')
+             {
+                f.ddd.value=lastval.substring(0,lastval.length-1);
+                f.ddd.value+='+';
+             }
+             else{
+                f.ddd.value+='+';
+             }
+
+        }
+
+        function sub()
+        {
+            var lastval=0,b=0;
+            lastval=f.ddd.value;
+            b=lastval.charAt(lastval.length-1);
+             if(b=='+'||b=='-'||b=='*'||b=='/')
+             {
+                f.ddd.value=lastval.substring(0,lastval.length-1);
+                f.ddd.value+='-';
+             }
+             else{
+                f.ddd.value+='-';
+             }
+
+        }
+
+        function mul()
+        {
+            var lastval=0,b=0;
+            lastval=f.ddd.value;
+            b=lastval.charAt(lastval.length-1);
+             if(b=='+'||b=='-'||b=='*'||b=='/')
+             {
+                f.ddd.value=lastval.substring(0,lastval.length-1);
+                f.ddd.value+='*';
+             }
+             else{
+                f.ddd.value+='*';
+             }
+
+        }
+
+        function div()
+        {
+            var lastval=0,b=0;
+            lastval=f.ddd.value;
+            b=lastval.charAt(lastval.length-1);
+             if(b=='+'||b=='-'||b=='*'||b=='/')
+             {
+                f.ddd.value=lastval.substring(0,lastval.length-1);
+                f.ddd.value+='/';
+             }
+             else{
+                f.ddd.value+='/';
+             }
+
+        }
+        
+    </script>
+</body>
+</html>
